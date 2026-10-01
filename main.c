@@ -5,12 +5,11 @@ int main(void){
     printf("정수 하나를 입력하시오 : ");
     scanf("%d", &num);
 
-    if(num>0)
-        printf("양수입니다.");
-    else if (num<0)
-        printf("음수입니다.");
-    else 
-        printf("0입니다.");
+    if (num<0)
+   	 printf("절댓값은 %d 입니다.", -num);
+    
+    else
+    	printf("절댓값은 %d 입니다.", num);
 
     return 0;
 }
