@@ -2,15 +2,30 @@
 
 int main(void){
     int a;
-    printf("input a number : ");
-    scanf("%d", &a);
+    int b;
+    char operator;
 
-    int i;
-    int sum=0;
-    for(i=1 ; i<=a ; i++)
-    sum+=i;
-    printf("The result is %d", sum);
+    printf("enter the calculation : ");
+    scanf("%d %c %d", &a, &operator, &b);
+
+    switch(operator)
+    {
+        case '+':
+            printf("%d %c %d = %d\n", a, operator, b, a+b);
+            break;
+
+        case '-':
+            printf("%d %c %d = %d\n", a, operator, b, a-b);
+            break;
+
+        case '*':
+            printf("%d %c %d = %d\n", a, operator, b, a*b);
+            break;
+
+        case '/':
+            printf("%d %c %d = %f\n", a, operator, b, (float)a/b);
+            break;
+    }
 
     return 0;
 }
-
