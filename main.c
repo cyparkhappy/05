@@ -2,30 +2,23 @@
 
 int main(void){
     int a;
-    int b;
-    char operator;
+    int answer=59;
+    int count=0;
 
-    printf("enter the calculation : ");
-    scanf("%d %c %d", &a, &operator, &b);
+    do {
+        printf("Guess a number : ");
+        scanf("%d", &a);
 
-    switch(operator)
-    {
-        case '+':
-            printf("%d %c %d = %d\n", a, operator, b, a+b);
-            break;
+        count++;
 
-        case '-':
-            printf("%d %c %d = %d\n", a, operator, b, a-b);
-            break;
-
-        case '*':
-            printf("%d %c %d = %d\n", a, operator, b, a*b);
-            break;
-
-        case '/':
-            printf("%d %c %d = %f\n", a, operator, b, (float)a/b);
-            break;
+        if(a>answer)
+            printf("high!\n");
+        else if (a<answer)
+            printf("low!\n");
+        else
+            printf("Congratulation! trials: %d", count);
     }
+    while(a != answer);
 
     return 0;
 }
